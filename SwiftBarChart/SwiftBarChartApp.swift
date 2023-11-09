@@ -11,7 +11,7 @@ import SwiftUI
 struct SwiftBarChartApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView(counter: 0.0)
+            ContentView(getNumberValue: 0.0)
         }
     }
 }
