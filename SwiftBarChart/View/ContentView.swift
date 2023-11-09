@@ -9,24 +9,20 @@ import SwiftUI
 
 struct ContentView: View {
     @StateObject var viewModel = ChartViewModel()
-    @State var counter:Double
-    @State var dataArray:[ChartModel] = []
+    @State var getNumberValue:Double
     var body: some View {
         NavigationStack{
             List(viewModel.data){number in
                 Text(String(describing:number.value))
                     .onTapGesture {
-                        self.counter = number.value
+                        self.getNumberValue = number.value
                     }
-                    .listRowBackground(self.counter == number.value ? Color.red : Color.clear)
-            }.onAppear(perform: {
-                dataArray.append(contentsOf: viewModel.data)
-            })
-            .toolbar {
+                    .listRowBackground(self.getNumberValue == number.value ? Color.red : Color.clear)
+            }.toolbar {
                 ToolbarItem(placement: .bottomBar, content: {
                     NavigationLink(
                         destination:
-                            ChartView(data: dataArray),
+                            ChartView(data: viewModel.data),
                         label: {
                             Text("Chart").foregroundStyle(.blue)
                         }
@@ -43,5 +39,5 @@ struct ContentView: View {
 }
 
 #Preview {
-    ContentView(counter: 0.0)
+    ContentView(getNumberValue: 0.0)
 }
