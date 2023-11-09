@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		D675B6F72AFD262F008CF6A1 /* ChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D675B6F62AFD262F008CF6A1 /* ChartView.swift */; };
-		D675B6F92AFD2681008CF6A1 /* ChartData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D675B6F82AFD2681008CF6A1 /* ChartData.swift */; };
 		D68DDE462AC7182300251251 /* ChartModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D68DDE452AC7182300251251 /* ChartModel.swift */; };
 		D68DDE492AC718D000251251 /* ChartViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D68DDE482AC718D000251251 /* ChartViewModel.swift */; };
 		D6A319942AC4023800731A97 /* SwiftBarChartApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A319932AC4023800731A97 /* SwiftBarChartApp.swift */; };
@@ -39,7 +38,6 @@
 
 /* Begin PBXFileReference section */
 		D675B6F62AFD262F008CF6A1 /* ChartView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ChartView.swift; path = SwiftBarChart/ChartView.swift; sourceTree = SOURCE_ROOT; };
-		D675B6F82AFD2681008CF6A1 /* ChartData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartData.swift; sourceTree = "<group>"; };
 		D68DDE452AC7182300251251 /* ChartModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartModel.swift; sourceTree = "<group>"; };
 		D68DDE482AC718D000251251 /* ChartViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartViewModel.swift; sourceTree = "<group>"; };
 		D6A319902AC4023800731A97 /* SwiftBarChart.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftBarChart.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -92,7 +90,6 @@
 			isa = PBXGroup;
 			children = (
 				D68DDE452AC7182300251251 /* ChartModel.swift */,
-				D675B6F82AFD2681008CF6A1 /* ChartData.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -297,7 +294,6 @@
 				D6A319962AC4023800731A97 /* ContentView.swift in Sources */,
 				D6A319942AC4023800731A97 /* SwiftBarChartApp.swift in Sources */,
 				D675B6F72AFD262F008CF6A1 /* ChartView.swift in Sources */,
-				D675B6F92AFD2681008CF6A1 /* ChartData.swift in Sources */,
 				D68DDE462AC7182300251251 /* ChartModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
