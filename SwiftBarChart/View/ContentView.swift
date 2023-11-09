@@ -10,6 +10,7 @@ import SwiftUI
 struct ContentView: View {
     @StateObject var viewModel = ChartViewModel()
     @State var counter:Double
+    @State var dataArray:[ChartModel] = []
     var body: some View {
         NavigationStack{
             List(viewModel.data){number in
@@ -18,35 +19,14 @@ struct ContentView: View {
                         self.counter = number.value
                     }
                     .listRowBackground(self.counter == number.value ? Color.red : Color.clear)
-            }.toolbar {
-                ToolbarItem(placement: .bottomBar, content: {
-                    Button {
-                        viewModel.makeNewArray()
-                    } label: {
-                        Text("New Array")
-                    }
-                    
-                })
-                ToolbarItem(placement: .bottomBar, content: {
-                    Button {
-                        viewModel.removeAllArray()
-                    } label: {
-                        Text("Remove Array")
-                    }
-                    
-                })
-                ToolbarItem(placement: .bottomBar, content: {
-                    Button {
-                        viewModel.sortArray()
-                    } label: {
-                        Text("Sort Array")
-                    }
-                    
-                })
+            }.onAppear(perform: {
+                dataArray.append(contentsOf: viewModel.data)
+            })
+            .toolbar {
                 ToolbarItem(placement: .bottomBar, content: {
                     NavigationLink(
-                        destination: 
-                            ChartView(data:viewModel.data),
+                        destination:
+                            ChartView(data: dataArray),
                         label: {
                             Text("Chart").foregroundStyle(.blue)
                         }

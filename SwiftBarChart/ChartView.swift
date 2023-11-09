@@ -9,7 +9,7 @@ import SwiftUI
 import Charts
 
 struct ChartView: View {
-    @State var data:[ChartData]=[]
+    @State var data:[ChartModel]=[]
     var body: some View {
         NavigationStack{
             Chart {
